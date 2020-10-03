@@ -6,4 +6,4 @@ tags: ['this','that']
 excerpt: "A preview of my first post"
 ---
 
-Lorem ipsum Lorem ipsum Lorem ipsum
+Example the post 

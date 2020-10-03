@@ -1,5 +1,6 @@
 import React from 'react'
 import {graphql, Link} from 'gatsby'
+import Header from "../components/header"
 
 const Template = ({data, pageContext}) =>{
     const {next, prev} = pageContext
@@ -8,7 +9,9 @@ const Template = ({data, pageContext}) =>{
     const html = markdownRemark.html
     return (
         <div>
-            <h2>{title}</h2>
+            <Header/>        
+        <div className="container">
+            <h2 className="has-text-centered is-size-1-mobile is-size-4 has-text-weight-bold">{title}</h2>
             <div className='blogpost'
             dangerouslySetInnerHTML={{__html:html}}/>
 
@@ -22,6 +25,7 @@ const Template = ({data, pageContext}) =>{
                 | Prev
             </Link>
              }
+        </div>
         </div>
     )
 }

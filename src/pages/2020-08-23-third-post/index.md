@@ -1,9 +1,9 @@
 ---
 path: "/third-post"
 date: "2020-08-23"
-title: "My third Post"
+title: "¿Cómo está hecho el sitio?"
 tags: ['this','that']
-excerpt: "A preview of my third post"
+excerpt: "Este post muestra como cree este sitio"
 ---
 
-Lorem ipsum Lorem ipsum Lorem ipsum
+El sitio está creado..

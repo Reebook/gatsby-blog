@@ -10,7 +10,8 @@ module.exports = {
     title: 'My Personal Page',
     description: 'This is my page'
   },
-  plugins: [
+  plugins: [    
+    `gatsby-plugin-sass`,    
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -20,4 +21,5 @@ module.exports = {
       }
     }
   ],
+  
 }
