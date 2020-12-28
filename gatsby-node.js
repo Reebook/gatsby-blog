@@ -15,18 +15,22 @@ exports.createPages = (({graphql,actions}) => {
                         node{
                             frontmatter{
                                 path
+                                featuredImage
                             }
                         }
                     }
                 }
                 }`
             ).then(result =>{
+                
                 const posts = result.data.allMarkdownRemark.edges
-                posts.forEach(({node},index) =>{
+                
+                posts.forEach(({node},index) =>{                    
                     const path = node.frontmatter.path
+                    const featuredImage = node.frontmatter.featuredImage
                     createPage(
                         {
-                            path,
+                            path,                            
                             component: blogPostTemplate,
                             context: {
                                 pathSlug: path,

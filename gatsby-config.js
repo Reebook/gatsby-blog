@@ -11,15 +11,25 @@ module.exports = {
     description: 'This is my page'
   },
   plugins: [    
-    `gatsby-plugin-sass`,    
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options:{
         name: `pages`,
         path: `${__dirname}/src/pages`
       }
-    }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        commonmark: true,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-plugin-sass`,    
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+   
   ],
   
 }

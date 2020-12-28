@@ -1,22 +1,39 @@
 import React from "react"
 import { StaticQuery, graphql,Link } from "gatsby"
 
-const TitleAndDescription = ({data}) => {
+const TitleAndDescription = () => {
     // const title = data.site.siteMetadata.title
     // const description = data.site.siteMetadata.description
 
     return (
         <div className="hero-head">
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-        <div className="navbar-menu">
+        <nav className="navbar">
+        
+        <span className="navbar-burger burger" data-target="navbarMenu">
+          <span ></span>
+          <span ></span>
+          <span ></span>
+        </span>
+        <div id="navbarMenu" className="navbar-menu">
             <div className="navbar-end">
-                <div className="navbar" role="navigation" aria-label="main navigation">
-                    <Link className="navbar-item" to={'/'}>
-                    INICIO
+                <div className="navbar tabs">
+                    <ul>
+                        <li>
+                    <Link className="navbar-item has-text-weight-semibold" to={'/'}>
+                        INICIO
                     </Link>
-                    <Link className="navbar-item" to={'/blog'}>
-                    BLOG
+                    </li>
+                    <li>
+                    <Link className="navbar-item has-text-weight-semibold" to={'/about'}>
+                        ABOUT
                     </Link>
+                    </li>
+                    <li>
+                    <Link className="navbar-item has-text-weight-semibold" to={'/blog'}>
+                        BLOG
+                    </Link>
+                    </li>
+                    </ul>
                 </div>
             </div>
         
